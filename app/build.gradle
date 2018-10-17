@@ -16,7 +16,7 @@ android {
         versionName "1.0-sdk-$notifications_sdk_version"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "BASE_URL", findQuotedProperty("NOTIFICATIONS_SDK_BASE_URL", "https://portal.sensorberg-cdn.com")
+        buildConfigField "String", "BASE_URL", findQuotedProperty("NOTIFICATIONS_SDK_BASE_URL", wrapInQuotes("https://portal.sensorberg-cdn.com"))
         buildConfigField "String", "API_KEY", findQuotedProperty("NOTIFICATIONS_SDK_API_KEY", "null")
     }
     buildTypes {
