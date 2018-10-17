@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply from: 'https://raw.githubusercontent.com/sensorberg-dev/gradle-scripts/master/common-def.gradle'
 
+ext.notifications_sdk_version = "2.7.10"
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -11,7 +13,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0"
+        versionName "1.0-sdk-$notifications_sdk_version"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         buildConfigField "String", "BASE_URL", findQuotedProperty("NOTIFICATIONS_SDK_BASE_URL", "https://portal.sensorberg-cdn.com")
@@ -34,7 +36,7 @@ dependencies {
 
     implementation 'com.jakewharton.timber:timber:4.7.1'
     implementation 'com.sensorberg.libs:permission-bitte:0.2.2'
-    implementation 'com.sensorberg.notifications:sdk:2.7.10'
+    implementation "com.sensorberg.notifications:sdk:$notifications_sdk_version"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
