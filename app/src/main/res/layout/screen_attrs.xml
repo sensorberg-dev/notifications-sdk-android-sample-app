@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="1000dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Change Attributes" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1">
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/key_0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="key 0"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/value_0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Value 0"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/key_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="key 1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/value_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Value 1"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/key_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="key 2"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/value_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Value 2"
+                android:singleLine="true" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Setup" />
+
+</LinearLayout>

@@ -14,12 +14,12 @@ class MainActivity : AppCompatActivity(), BitteBitte {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (savedInstanceState == null) {
-            val fragment =
-                    if (App.isSdkInitialized()) ScreenMain()
-                    else ScreenSetup()
+            val (fragment, tag) =
+                    if (App.isSdkInitialized()) Pair(ScreenMain(), TAG_MAIN)
+                    else Pair(ScreenSetup(), TAG_SETUP)
             supportFragmentManager
                     .beginTransaction()
-                    .replace(android.R.id.content, fragment)
+                    .replace(android.R.id.content, fragment, tag)
                     .commit()
         }
         PermissionBitte.ask(this, this)
@@ -51,5 +51,12 @@ class MainActivity : AppCompatActivity(), BitteBitte {
 
     override fun noYouCant() {
         PermissionBitte.goToSettings(this)
+    }
+
+    companion object {
+        const val TAG_MAIN = "screen_main"
+        const val TAG_SETUP = "screen_setup"
+        const val TAG_AD_ID = "screen_ad_id"
+        const val TAG_ATTRS = "screen_attrs"
     }
 }

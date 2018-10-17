@@ -32,13 +32,11 @@ class ScreenMain : Fragment() {
     }
 
     private fun changeAttrs() {
-        // TODO: map input dialog
-        Toast.makeText(context, "TODO:", Toast.LENGTH_SHORT).show()
+        ScreenAttrs().show(activity!!.supportFragmentManager, MainActivity.TAG_ATTRS)
     }
 
     private fun changeAdId() {
-        // TODO: text input dialog
-        Toast.makeText(context, "TODO:", Toast.LENGTH_SHORT).show()
+        ScreenAdId().show(activity!!.supportFragmentManager, MainActivity.TAG_AD_ID)
     }
 
     private fun updateTextEnable() {

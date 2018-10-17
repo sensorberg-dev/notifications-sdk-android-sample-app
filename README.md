@@ -1,6 +1,6 @@
 # Notifications SDK Sample App
 
-This sample app demonstrates a complete implementation for the Sensorberg Notifications SDK  
+This sample app demonstrates a complete implementation for the Sensorberg Notifications SDK
 https://github.com/sensorberg-dev/notifications-sdk-android
 
 ### Setup
