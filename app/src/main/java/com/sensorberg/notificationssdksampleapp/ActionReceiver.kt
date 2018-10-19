@@ -29,7 +29,7 @@ class ActionReceiver : AbstractActionReceiver() {
             val notification = createNotification(context, pending, action)
 
             App.sdk.setConversion(action, Conversion.Ignored)
-            notificationManager.notify(action.id.hashCode(), notification)
+            notificationManager.notify(action.instanceId.hashCode(), notification)
         } else {
             Timber.w("Notifications are disabled")
             App.sdk.setConversion(action, Conversion.NotificationDisabled)

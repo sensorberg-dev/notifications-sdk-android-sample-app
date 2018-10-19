@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 
 apply from: 'https://raw.githubusercontent.com/sensorberg-dev/gradle-scripts/master/common-def.gradle'
 
-ext.notifications_sdk_version = "2.7.10"
+ext.notifications_sdk_version = "2.7.12"
 
 android {
     compileSdkVersion 27
